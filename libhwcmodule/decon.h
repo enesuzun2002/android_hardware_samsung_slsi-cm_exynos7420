@@ -146,6 +146,13 @@ struct decon_win_config {
             /* source framebuffer coordinates */
             struct decon_frame              src;
         };
+        struct {
+            int left;
+            int top;
+            int right;
+            int bottom;
+            int enableDSU;
+        };
     };
     
     /* destination OSD coordinates */
@@ -159,6 +166,20 @@ struct decon_win_config_data {
     struct decon_win_config config[MAX_DECON_WIN + 1];
 };
 
+enum decon_dsu_state {
+    DECON_DSU_DONE = 0,
+    DECON_DSU_IGNORE_VSYNC,
+    DECON_DSU_MIC_CMD,
+    DECON_DSU_TE_ON,
+    DECON_DSU_DISPLAY_ON,
+    DECON_DSU_UPDATE_RECT,
+};
+enum decon_dsu_mode {
+    DECON_DSU_RES_WQHD = 4,
+    DECON_DSU_RES_FHD = 5,
+    DECON_DSU_RES_HD = 6,
+    DECON_DSU_RES_DEFAULT = 4,
+};
 
 /* IOCTL commands */
 #define S3CFB_WIN_POSITION              _IOW('F', 203, \
