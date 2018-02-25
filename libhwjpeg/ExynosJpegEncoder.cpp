@@ -185,6 +185,17 @@ int ExynosJpegEncoder::updateConfig(void)
                     NUM_JPEG_ENC_IN_PLANES, NUM_JPEG_ENC_OUT_PLANES);
 }
 
+int ExynosJpegEncoder::setQuality(unsigned char const *iQualityLevel)
+{
+    if (t_bFlagCreate == false)
+        return ERROR_JPEG_DEVICE_NOT_CREATE_YET;
+
+    // TODO: implement this, but this seems to be unused in normal usage, only referenced
+
+    JPEG_ERROR_LOG("%s::setQuality(uchar const *) NOT IMPLEMENTED\n", __func__);
+    return ERROR_NONE;
+}
+
 int ExynosJpegEncoder::setQuality(int iV4l2Quality)
 {
     if (t_bFlagCreate == false)

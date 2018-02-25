@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+# HW JPEG processing
+PRODUCT_PACKAGES += \
+	libhwjpeg
+
 # Video Codecs
 PRODUCT_PACKAGES += \
 	libOMX.Exynos.VP8.Encoder

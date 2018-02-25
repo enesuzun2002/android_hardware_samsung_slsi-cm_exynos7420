@@ -204,6 +204,7 @@ public:
     int setColorBufSize(int *piBufSize, int iSize);
     int updateConfig(void);
 
+    int setQuality(unsigned char const *iQualityLevel);
     int setQuality(int iQuality);
     int getJpegSize(void);
 
