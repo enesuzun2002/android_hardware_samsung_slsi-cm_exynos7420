@@ -159,12 +159,19 @@ struct decon_win_config_data {
     struct decon_win_config config[MAX_DECON_WIN + 1];
 };
 
-enum disp_pwr_mode {
+// not supported by clang
+/* enum disp_pwr_mode {
 	DECON_POWER_MODE_OFF = 0,
 	DECON_POWER_MODE_DOZE,
 	DECON_POWER_MODE_NORMAL,
 	DECON_POWER_MODE_DOZE_SUSPEND,
-};
+}; */
+
+// clang-support
+#define DECON_POWER_MODE_OFF  0
+#define DECON_POWER_MODE_DOZE  1
+#define DECON_POWER_MODE_NORMAL  2
+#define DECON_POWER_MODE_DOZE_SUSPEND  3
 
 /* IOCTL commands */
 #define S3CFB_WIN_POSITION              _IOW('F', 203, \
