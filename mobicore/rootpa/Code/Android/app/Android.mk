@@ -13,7 +13,6 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_PACKAGE_NAME := RootPA
 LOCAL_MODULE_TAGS := eng optional
 LOCAL_CERTIFICATE := platform
-LOCAL_SDK_VERSION := current
 
 LOCAL_PROGUARD_FLAGS := -include $(LOCAL_PATH)/proguard-project.txt
 
