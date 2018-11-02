@@ -174,13 +174,13 @@ static void LOG_I_Buf(
 		{
 			index += sprintf(&buffer[index], "memory dump");
 		}
-		index += sprintf(&buffer[index], " (0x%" PRIxPTR ", %zu bytes)", (uintptr_t)blob,sizeOfBlob);
+		index += sprintf(&buffer[index], " (0x%lx, %zu bytes)", (unsigned long)blob,sizeOfBlob);
 		LOG_I("%s", buffer);
 		index = 0;
 	}
 	else if (NULL == szDescriptor)
 	{
-		index += sprintf(&buffer[index], "Data at 0x%" PRIxPTR ": ", (uintptr_t)blob);
+		index += sprintf(&buffer[index], "Data at 0x%lx: ", (unsigned long)blob);
 	}
 
 	if(sizeOfBlob == 0) {

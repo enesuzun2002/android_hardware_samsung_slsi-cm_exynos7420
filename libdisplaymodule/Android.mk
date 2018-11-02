@@ -35,6 +35,8 @@ LOCAL_C_INCLUDES := \
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 
+LOCAL_CFLAGS += -Wno-unused-function
+
 LOCAL_SRC_FILES := \
 	ExynosPrimaryDisplay.cpp
 
