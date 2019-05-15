@@ -31,4 +31,7 @@ LOCAL_SHARED_LIBRARIES := libcrypto liblog libMcClient libnativehelper
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 
+LOCAL_CFLAGS += -Wno-gnu-designator
+LOCAL_CFLAGS += -Wno-unused-parameter
+
 include $(BUILD_SHARED_LIBRARY)

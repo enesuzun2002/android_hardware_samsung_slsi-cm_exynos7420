@@ -384,8 +384,6 @@ static int gralloc_alloc(alloc_device_t* dev,
 
     private_module_t* m = reinterpret_cast<private_module_t*>
         (dev->common.module);
-    gralloc_module_t* module = reinterpret_cast<gralloc_module_t*>
-        (dev->common.module);
 
     if ((usage & GRALLOC_USAGE_GPU_BUFFER) && (w*h != (m->xres)*(m->yres)))
         usage &= ~GRALLOC_USAGE_GPU_BUFFER;

@@ -130,7 +130,7 @@ static int gralloc_unmap(gralloc_module_t const* module, buffer_handle_t handle)
             return 0;
         if (munmap(hnd->base1, chroma_size) < 0) {
             ALOGE("%s :could not unmap %s %p %d", __func__, strerror(errno),
-                  hnd->base1, chroma_size);
+                  hnd->base1, (uint32_t)chroma_size);
         }
         hnd->base1 = 0;
     }
@@ -139,7 +139,7 @@ static int gralloc_unmap(gralloc_module_t const* module, buffer_handle_t handle)
             return 0;
         if (munmap(hnd->base2, chroma_size) < 0) {
             ALOGE("%s :could not unmap %s %p %d", __func__, strerror(errno),
-                  hnd->base2, chroma_size);
+                  hnd->base2, (uint32_t)chroma_size);
         }
         hnd->base2 = 0;
     }
