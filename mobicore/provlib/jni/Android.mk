@@ -3,7 +3,6 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE      := libgdmcprov
-LOCAL_MODULE_TAGS := debug eng optional
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 

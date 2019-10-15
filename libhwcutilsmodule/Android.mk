@@ -44,7 +44,6 @@ LOCAL_SRC_FILES := \
 
 LOCAL_CFLAGS += -Wno-unused-function
 
-LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libhwcutilsmodule
 include $(BUILD_SHARED_LIBRARY)
 

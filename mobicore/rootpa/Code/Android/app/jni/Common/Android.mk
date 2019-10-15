@@ -81,6 +81,5 @@ endif
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 
-LOCAL_MODULE_TAGS := eng optional
 
 include $(BUILD_STATIC_LIBRARY)
